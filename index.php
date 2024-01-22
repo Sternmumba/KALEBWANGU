@@ -430,10 +430,10 @@ foreach ($result as $row)
                             <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a>
                             </h3>
                             <h4>
-                                ZK<?php echo $row['p_current_price']; ?>
+                                ZKW<?php echo $row['p_current_price']; ?>
                                 <?php if($row['p_old_price'] != ''): ?>
                                 <del>
-                                    ZK<?php echo $row['p_old_price']; ?>
+                                    ZKW<?php echo $row['p_old_price']; ?>
                                 </del>
                                 <?php endif; ?>
                             </h4>
