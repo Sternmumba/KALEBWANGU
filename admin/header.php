@@ -23,7 +23,7 @@ if(!isset($_SESSION['user'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SM Generation Admin Panel</title>
+    <title>Admin Panel</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -50,7 +50,7 @@ if(!isset($_SESSION['user'])) {
         <header class="main-header">
 
             <a href="index.php" class="logo">
-                <span class="logo-lg">SM Generation eCommerce</span>
+                <span class="logo-lg">KALEBWANGU ONLINE SITE</span>
             </a>
 
             <nav class="navbar navbar-static-top">
@@ -59,8 +59,7 @@ if(!isset($_SESSION['user'])) {
                     <span class="sr-only">Toggle navigation</span>
                 </a>
 
-                <span style="float:left;line-height:50px;color:#fff;padding-left:15px;font-size:18px;">SM Generation
-                    Admin Panel</span>
+                <span style="float:left;line-height:50px;color:#fff;padding-left:15px;font-size:18px;">Admin Panel</span>
                 <!-- Top Bar ... User Inforamtion .. Login/Log out Area -->
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
