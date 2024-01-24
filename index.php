@@ -163,10 +163,10 @@ foreach ($result as $row)
                             <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"style="font-size:10px;"><?php echo $row['p_name']; ?></a>
                             </h3>
                             <h4>
-                                ZK<?php echo $row['p_current_price']; ?>
+                                ZMK<?php echo $row['p_current_price']; ?>
                                 <?php if($row['p_old_price'] != ''): ?>
                                 <del>
-                                    ZK<?php echo $row['p_old_price']; ?>
+                                    ZMK<?php echo $row['p_old_price']; ?>
                                 </del>
                                 <?php endif; ?>
                             </h4>
@@ -295,10 +295,10 @@ foreach ($result as $row)
                             <h3 ><a href="product.php?id=<?php echo $row['p_id']; ?>" style="font-size:10px;"><?php echo $row['p_name']; ?></a>
                             </h3>
                             <h4 style="">
-                                ZKW<?php echo $row['p_current_price']; ?>
+                                ZMK<?php echo $row['p_current_price']; ?>
                                 <?php if($row['p_old_price'] != ''): ?>
                                 <del>
-                                    ZKW<?php echo $row['p_old_price']; ?>
+                                    ZMK<?php echo $row['p_old_price']; ?>
                                 </del>
                                 <?php endif; ?>
                             </h4>
