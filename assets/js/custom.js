@@ -34,8 +34,8 @@
         // Carousel - Product
         productCarousel.owlCarousel({
             loop: true,
-            autoplay: true,
-            margin: 15,
+            autoplay: false,
+            margin: 10,
             dots: false,
             animateIn: true,
             responsiveClass: true,
@@ -53,7 +53,7 @@
                     nav: true
                 },
                 1000: {
-                    items: 4,
+                    items: 6,
                     nav: true,
                     loop: true
                 }
