@@ -51,6 +51,7 @@ foreach ($result as $row)
         ?>
     </ol>
 
+    
     <!-- Wrapper For Slides -->
     <div class="carousel-inner" role="listbox">
 
