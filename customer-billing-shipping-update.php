@@ -79,6 +79,7 @@ if (isset($_POST['form1'])) {
     $_SESSION['customer']['cust_s_city'] = strip_tags($_POST['cust_s_city']);
     $_SESSION['customer']['cust_s_state'] = strip_tags($_POST['cust_s_state']);
     $_SESSION['customer']['cust_s_zip'] = strip_tags($_POST['cust_s_zip']);
+    header("location:checkout.php");
 
 }
 ?>

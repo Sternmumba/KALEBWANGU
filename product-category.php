@@ -123,19 +123,16 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
 
 <div class="page-banner" style="background-image: url(assets/uploads/<?php echo $banner_product_category; ?>)">
     <div class="inner">
-        <h1><?php echo LANG_VALUE_50; ?> <?php echo $title; ?></h1>
+        <h1 ><?php echo LANG_VALUE_50; ?> <?php echo $title; ?></h1>
     </div>
 </div>
 
 <div class="page">
     <div class="container">
-        <div class="row">
-         
-            <div class="col-md-12">
-                
-                <h3><?php echo LANG_VALUE_51; ?> "<?php echo $title; ?>"</h3>
+        <div class="row"> 
+            <div class="col-md-12">       
+                <h3 style="margin-top:-80px;"><?php echo LANG_VALUE_51; ?> "<?php echo $title; ?>"</h3>
                 <div class="product product-cat">
-
                     <div class="row">
                         <?php
                         // Checking if any product is available or not
@@ -162,8 +159,8 @@ if( !isset($_REQUEST['id']) || !isset($_REQUEST['type']) ) {
                                 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                                 foreach ($result as $row) {
                                     ?>
-                                    <div class="col-md-4 item item-product-cat" >
-                                        <div class="inner" style="height:300px;width:200px;overflow:hidden;">
+                                    <div class="col-md-2 item item-product-cat" >
+                                        <div class="inner" style="height:300px;overflow:hidden;">
                                             <div class="thumb" style="background:white">
                                                 <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);height:150px;width:150px;display: block;margin-left: auto;margin-right: auto;width: 50%;"></div>
                                                 <div class="overlay"></div>

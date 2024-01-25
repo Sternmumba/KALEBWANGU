@@ -657,8 +657,8 @@ if($success_message1 != '') {
         <div class="row">
             <div class="col-md-12">
                 <div class="headline">
-                    <h2><?php echo LANG_VALUE_155; ?></h2>
-                    <h3><?php echo LANG_VALUE_156; ?></h3>
+                    <h2 style="font-size:25px;"><?php echo LANG_VALUE_155; ?></h2>
+                    <h3 style="font-size:15px;"><?php echo LANG_VALUE_156; ?></h3>
                 </div>
             </div>
         </div>
@@ -673,13 +673,13 @@ if($success_message1 != '') {
                     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
                     foreach ($result as $row) {
                         ?>
-                        <div class="item">
-                            <div class="thumb">
-                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
+                        <div class="item" style="height:300px;overflow:hidden">
+                            <div class="thumb" style="background:white;">
+                                <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);height:150px;width:150px;display: block;margin-left: auto;margin-right: auto;width: 50%;"></div>
                                 <div class="overlay"></div>
                             </div>
                             <div class="text">
-                                <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
+                                <h3><a href="product.php?id=<?php echo $row['p_id']; ?>" style="font-size:10px;"><?php echo $row['p_name']; ?></a></h3>
                                 <h4>
                                     <?php echo LANG_VALUE_1; ?><?php echo $row['p_current_price']; ?> 
                                     <?php if($row['p_old_price'] != ''): ?>
