@@ -101,7 +101,6 @@ foreach ($result as $row) {
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
-
 	<?php
 
 	$statement = $pdo->prepare("SELECT * FROM tbl_page WHERE id=1");
@@ -289,7 +288,17 @@ foreach ($result as $row) {
 					<?php
 					if(isset($_SESSION['customer'])) {
 						?>
-						<li><i class="fa fa-user"></i> <?php echo LANG_VALUE_13; ?> <?php echo $_SESSION['customer']['cust_name']; ?></li>
+						<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <li class="text-white"><i class="fa fa-user text-white"></i>  <?php echo $_SESSION['customer']['cust_name']; ?></li><i class="fa-solid fa-caret-down"></i>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="customer-profile-update.php">Update Profile</a></li>
+    <li><a class="dropdown-item" href="customer-password-update.php">Update Password</a></li>
+    <li><a class="dropdown-item" href="logout.php">Login Out</a></li>
+  </ul>
+</div>
+						
 						<li><a href="dashboard.php"><i class="fa fa-home"></i> <?php echo LANG_VALUE_89; ?></a></li>
 						<?php
 					} else {

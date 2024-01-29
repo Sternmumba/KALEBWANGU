@@ -150,14 +150,14 @@ foreach ($result as $row) {
                             else:
                             foreach ($result as $row) {
                                 ?>
-                                <div class="col-md-3 item item-search-result">
+                                <div class="col-md-3 item item-search-result" style="height:300px;overflow:hidden">
                                     <div class="inner">
                                         <div class="thumb">
-                                            <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);"></div>
+                                            <div class="photo" style="background-image:url(assets/uploads/<?php echo $row['p_featured_photo']; ?>);height:150px;width:150px;display: block;margin-left: auto;margin-right: auto;width: 50%;"></div>
                                             <div class="overlay"></div>
                                         </div>
                                         <div class="text">
-                                            <h3><a href="product.php?id=<?php echo $row['p_id']; ?>"><?php echo $row['p_name']; ?></a></h3>
+                                            <h3><a href="product.php?id=<?php echo $row['p_id']; ?>" style="font-size:10px;"><?php echo $row['p_name']; ?></a></h3>
                                             <h4>
                                                 $<?php echo $row['p_current_price']; ?> 
                                                 <?php if($row['p_old_price'] != ''): ?>

@@ -169,6 +169,8 @@ foreach ($result as $row) {
 		$('#paypal_form').hide();
 		$('#stripe_form').hide();
 		$('#bank_form').hide();
+		$('#airtel_form').hide();
+		$('#mtn_form').hide();
 
         $('#advFieldsStatus').on('change',function() {
             advFieldsStatus = $('#advFieldsStatus').val();
@@ -176,18 +178,38 @@ foreach ($result as $row) {
             	$('#paypal_form').hide();
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
+				$('#airtel_form').hide();
+				$('#mtn_form').hide();
             } else if ( advFieldsStatus == 'PayPal' ) {
                	$('#paypal_form').show();
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
+				$('#airtel_form').hide();
+				$('#mtn_form').hide();
             } else if ( advFieldsStatus == 'Stripe' ) {
                	$('#paypal_form').hide();
 				$('#stripe_form').show();
 				$('#bank_form').hide();
+				$('#airtel_form').hide();
+				$('#mtn_form').hide();
             } else if ( advFieldsStatus == 'Bank Deposit' ) {
             	$('#paypal_form').hide();
 				$('#stripe_form').hide();
 				$('#bank_form').show();
+				$('#airtel_form').hide();
+				$('#mtn_form').hide();
+            } else if ( advFieldsStatus == 'Airtel Money' ) {
+            	$('#paypal_form').hide();
+				$('#stripe_form').hide();
+				$('#bank_form').hide();
+				$('#airtel_form').show();
+				$('#mtn_form').hide();
+            } else if ( advFieldsStatus == 'Mtn Money' ) {
+            	$('#paypal_form').hide();
+				$('#stripe_form').hide();
+				$('#bank_form').hide();
+				$('#airtel_form').hide();
+				$('#mtn_form').show();
             }
         });
 	});
@@ -221,5 +243,7 @@ foreach ($result as $row) {
     }
 </script>
 <?php echo $before_body; ?>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

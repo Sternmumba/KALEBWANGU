@@ -88,7 +88,7 @@ if (isset($_POST['form1'])) {
         // saving into the database
         $statement = $pdo->prepare("INSERT INTO tbl_customer (
                                         cust_name,
-                                        cust_cname,
+                                       
                                         cust_email,
                                         cust_phone,
                                         cust_country,
@@ -117,10 +117,10 @@ if (isset($_POST['form1'])) {
                                         cust_datetime,
                                         cust_timestamp,
                                         cust_status
-                                    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                                    ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $statement->execute(array(
                                         strip_tags($_POST['cust_name']),
-                                        strip_tags($_POST['cust_cname']),
+                                        
                                         strip_tags($_POST['cust_email']),
                                         strip_tags($_POST['cust_phone']),
                                         strip_tags($_POST['cust_country']),
@@ -187,14 +187,11 @@ if (isset($_POST['form1'])) {
                                 }
                                 ?>
 
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <label for=""><?php echo LANG_VALUE_102; ?> *</label>
                                     <input type="text" class="form-control" name="cust_name" value="<?php if(isset($_POST['cust_name'])){echo $_POST['cust_name'];} ?>">
                                 </div>
-                                <div class="col-md-6 form-group">
-                                    <label for=""><?php echo LANG_VALUE_103; ?></label>
-                                    <input type="text" class="form-control" name="cust_cname" value="<?php if(isset($_POST['cust_cname'])){echo $_POST['cust_cname'];} ?>">
-                                </div>
+                               
                                 <div class="col-md-6 form-group">
                                     <label for=""><?php echo LANG_VALUE_94; ?> *</label>
                                     <input type="email" class="form-control" name="cust_email" value="<?php if(isset($_POST['cust_email'])){echo $_POST['cust_email'];} ?>">

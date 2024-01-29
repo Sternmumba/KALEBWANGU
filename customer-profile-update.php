@@ -63,7 +63,7 @@ if (isset($_POST['form1'])) {
         $statement = $pdo->prepare("UPDATE tbl_customer SET cust_name=?, cust_cname=?, cust_phone=?, cust_country=?, cust_address=?, cust_city=?, cust_state=?, cust_zip=? WHERE cust_id=?");
         $statement->execute(array(
                     strip_tags($_POST['cust_name']),
-                    strip_tags($_POST['cust_cname']),
+                   
                     strip_tags($_POST['cust_phone']),
                     strip_tags($_POST['cust_country']),
                     strip_tags($_POST['cust_address']),
@@ -76,7 +76,6 @@ if (isset($_POST['form1'])) {
         $success_message = LANG_VALUE_130;
 
         $_SESSION['customer']['cust_name'] = $_POST['cust_name'];
-        $_SESSION['customer']['cust_cname'] = $_POST['cust_cname'];
         $_SESSION['customer']['cust_phone'] = $_POST['cust_phone'];
         $_SESSION['customer']['cust_country'] = $_POST['cust_country'];
         $_SESSION['customer']['cust_address'] = $_POST['cust_address'];
@@ -109,13 +108,9 @@ if (isset($_POST['form1'])) {
                     <form action="" method="post">
                         <?php $csrf->echoInputField(); ?>
                         <div class="row">
-                            <div class="col-md-6 form-group">
+                            <div class="col-md-12 form-group">
                                 <label for=""><?php echo LANG_VALUE_102; ?> *</label>
                                 <input type="text" class="form-control" name="cust_name" value="<?php echo $_SESSION['customer']['cust_name']; ?>">
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <label for=""><?php echo LANG_VALUE_103; ?></label>
-                                <input type="text" class="form-control" name="cust_cname" value="<?php echo $_SESSION['customer']['cust_cname']; ?>">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label for=""><?php echo LANG_VALUE_94; ?> *</label>
